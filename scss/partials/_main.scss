@@ -1,0 +1,39 @@
+//Set default styles 
+html {
+  box-sizing: border-box;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+/*The body will have a very low specifity, but used to set font-style on the document*/
+body {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 1.7rem;
+}
+
+/*Use a more specific selectors to give headers and logo another font-family, this selector 
+ will have a higher specifity*/
+.header__page-logo, h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+}
+
+/*Styling the h4 element in the footer will have more specifity, use a descentant selector,
+ so if you have any other h4 in other parts of your document they will not be styled in this one*/
+footer h4 {
+  font-size: 1.3rem;
+}
+
+/*Styling the header page logo with its own selector, a class selector will give this one more specifity*/
+.header__page-logo {
+  font-size: 3rem;
+  font-weight: bold;
+}
