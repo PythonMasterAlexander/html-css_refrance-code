@@ -13,17 +13,43 @@ html {
   font-size: 16px;
 }
 
-/*The body will have a very low specifity, but used to set font-style on the document*/
+/*The body will have a very low specifity, but used here to set font-style on the document
+ Also using the body element for styling that are applied to the document is important and 
+ can save you for extra lines of code
+*/
 body {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /*Use a more specific selectors to give headers and logo another font-family, this selector 
  will have a higher specifity*/
+body, html {
+  height: 100%;
+}
+
 .header__page-logo, h1, h2, h3, h4 {
   font-family: 'Merriweather', serif;
   font-size: 2rem;
+}
+
+/*As you go down the stylesheet, use more specific selectors, and use more generic early in the css document*/
+p {
+  padding: $paragraph-inside-padding;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  margin: $margin-size 0;
+  text-align: center;
 }
 
 /*Styling the h4 element in the footer will have more specifity, use a descentant selector,
@@ -37,3 +63,28 @@ footer h4 {
   font-size: 3rem;
   font-weight: bold;
 }
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+/*Order of selectors
+ - Html
+ - Reset
+ - Root
+ - Body selector
+ - Generic selectors (The selectors that are together with others)
+ - More specific selectors
+ - Descentant selectors
+ - Class selectors
+ - Id selectors
+
+ Here are a general calculation of selector specificity
+ * = 000
+ p = 001
+ .class = 010
+ #id = 100
+ .class p = 011
+ #id p = 101
+ ul li a = 003
+*/
