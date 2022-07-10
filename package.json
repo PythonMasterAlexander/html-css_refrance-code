@@ -1,0 +1,22 @@
+{
+  "name": "html-css_refrance-code",
+  "version": "1.0.0",
+  "description": "Repository on github for refrance code for projects later (Help me remember)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PythonMasterAlexander/html-css_refrance-code.git"
+  },
+  "author": "Alexander Hardeland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PythonMasterAlexander/html-css_refrance-code/issues"
+  },
+  "homepage": "https://github.com/PythonMasterAlexander/html-css_refrance-code#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
